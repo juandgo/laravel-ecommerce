@@ -1,5 +1,5 @@
 @include('layouts.base')
 @section('content')
-    <h1>users Dashboard</h1>
+    <h1>Users Dashboard</h1>
 
-@endsection()
+@endsection

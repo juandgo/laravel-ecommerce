@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
 class AuthAdmin
@@ -17,7 +18,7 @@ class AuthAdmin
     {
         if(Auth::user()->utype != 'ADM'){
             session()->flush();
-            return redirect()->route('');
+            return redirect()->route('login');
         }
         return $next($request);
     }

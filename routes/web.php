@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AppController;
+use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,5 +27,5 @@ Route::middleware('auth')->group(function(){
 });
 
 Route::middleware(['auth','auth.admin'])->group(function(){
-    Route::get('/my-account',[AdminController::class,'index'])->name('admin.index');
+    Route::get('/admin',[AdminController::class,'index'])->name('admin.index');
 });
