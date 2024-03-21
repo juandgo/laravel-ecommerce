@@ -1,6 +1,11 @@
 @extends('layouts.base')
 @push('styles')
     <link id="color-link" rel="stylesheet" type="text/css" href="assets/css/demo2.css">
+    <style>
+        nav svg{
+            height: 20px;
+        }
+    </style>
 @endpush
 @section('content')
 <section class="breadcrumb-section section-b-space" style="padding-top:20px;padding-bottom:20px;">
@@ -35,7 +40,7 @@
     </div>
 </section>
 <!-- Shop Section start -->
-<section class="section-b-space">
+<section class="section-b-space bg-dark">
     <div class="container">
         <div class="row">
             <div class="col-lg-3 category-side col-md-4">
@@ -46,7 +51,7 @@
                     <div class="accordion category-name" id="accordionExample">
                         <div class="accordion-item category-rating">
                             <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                <button class="accordion-button bg-dark text-white" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseTwo">
                                     Brand
                                 </button>
@@ -60,7 +65,7 @@
                                             <div class="form-check ps-0 custome-form-check">
                                                 <input class="checkbox_animated check-it" id="br1" name="brands"
                                                     value="1" type="checkbox">
-                                                <label class="form-check-label">Quis Et</label>
+                                                <label class="form-check-label text-white">Quis Et</label>
                                                 <p class="font-light">(1)</p>
                                             </div>
                                         </li>
@@ -448,18 +453,18 @@
                     <div>
                         <div class="product-box">
                             <div class="img-wrapper">
-                                <div class="front">
+                                {{-- <div class="front">
                                     <a href="product/nihil-beatae-sit-sed.html">
                                         <img src="assets/images/fashion/product/front/{{ $product->image }}"
                                             class="bg-img blur-up lazyload" alt="">
                                     </a>
-                                </div>
-                                {{-- <div class="back">
+                                </div> --}}
+                                <div class="back">
                                     <a href="product/nihil-beatae-sit-sed.html">
                                         <img src="assets/images/fashion/product/back/{{ $product->image }}"
                                             class="bg-img blur-up lazyload" alt="">
                                     </a>
-                                </div> --}}
+                                </div>
                                 <div class="cart-wrap">
                                     <ul>
                                         <li>
@@ -517,36 +522,7 @@
                     </div>
                     @endforeach
                 </div>
-
-                <nav class="page-section">
-                    <ul class="pagination">
-                        <li class="page-item">
-                            <a class="page-link" href="javascript:void(0)" aria-label="Previous"
-                                style="color:#6c757d;">
-                                <span aria-hidden="true">
-                                    <i class="fas fa-chevron-left"></i>
-                                </span>
-                            </a>
-                        </li>
-
-
-                        <li class="page-item active">
-                            <a class="page-link" href="javascript:void(0)">1</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="shop-1.html?page=2">2</a>
-                        </li>
-
-                        <li class="page-item">
-                            <a href="shop-1.html?page=2" class="page-link" aria-label="Next">
-                                <span aria-hidden="true">
-                                    <i class="fas fa-chevron-right"></i>
-                                </span>
-                            </a>
-                        </li>
-
-                    </ul>
-                </nav>
+                {{ $products->links("pagination.default") }}
 
             </div>
         </div>

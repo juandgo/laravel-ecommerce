@@ -103,11 +103,11 @@
             <form method="POST" action="{{ route('register') }}">
                 @csrf
                 <div class="login-title">
-                    <h2>Register</h2>
+                    <h2>Regístrate</h2>
                 </div>
 
                 <div class="input">
-                    <label for="name">Name</label>
+                    <label for="name">Nombre</label>
                     <input type="text" id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required="" autofocus="" autocomplete="name">
                     @error('name') <span class="text-danger mt-3">{{ $message }}</span> @enderror
                 </div>
@@ -118,26 +118,26 @@
                 </div> --}}
 
                 <div class="input">
-                    <label for="emailname">Email Address</label>
+                    <label for="emailname">Correo</label>
                     <input type="email" id="emailname" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required="" autocomplete="username">
                     @error('email') <span class="text-danger mt-3">{{ $message }}</span> @enderror
                 </div>
 
                 <div class="input">
-                    <label for="pass">Password</label>
+                    <label for="pass">Contraceña</label>
                     <input type="password" id="pass" class="block mt-1 w-full" name="password" required="" autocomplete="new-password">
                     @error('password') <span class="text-danger mt-3">{{ $message }}</span> @enderror
                 </div>
 
                 <div class="input">
-                    <label for="compass">Confirm Password</label>
+                    <label for="compass">Confirmar Contraceña</label>
                     <input type="password" id="compass" class="block mt-1 w-full" name="password_confirmation"
                         required="" autocomplete="new-password">
                 </div>
 
                 <div class="button login">
                     <button type="submit">
-                        <span>Sign Up</span>
+                        <span>Registrarse</span>
                         <i class="fa fa-check"></i>
                     </button>
                 </div>

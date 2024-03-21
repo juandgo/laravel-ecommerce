@@ -52,7 +52,7 @@
 
 </head>
 
-<body class="theme-color4 light ltr">
+<body class="theme-color4 bg-dark">
     <style>
         header .profile-dropdown ul li {
             display: block;
@@ -108,7 +108,7 @@
         }
     </style>
     <header class="header-style-2" id="home">
-        <div class="main-header navbar-searchbar">
+        <div class="main-header navbar-searchbar bg-danger ">
             <div class="container-fluid-lg">
                 <div class="row">
                     <div class="col-lg-12">
@@ -122,13 +122,13 @@
                                 </div>
 
                             </div>
-                            <nav>
+                            <nav >
                                 <div class="main-navbar">
                                     <div id="mainnav">
                                         <div class="toggle-nav">
                                             <i class="fa fa-bars sidebar-bar"></i>
                                         </div>
-                                        <ul class="nav-menu">
+                                        <ul class="nav-menu bg-danger">
                                             <li class="back-btn d-xl-none">
                                                 <div class="close-btn">
                                                     Menu
@@ -136,13 +136,13 @@
                                                     </span>
                                                 </div>
                                             </li>
-                                            <li><a href="{{ route('app.index') }}" class="nav-link menu-title">Home</a></li>
-                                            <li><a href="{{ route('shop.index') }}" class="nav-link menu-title">Shop</a></li>
-                                            <li><a href="cart/list.html" class="nav-link menu-title">Cart</a></li>
-                                            <li><a href="about-us.html" class="nav-link menu-title">About Us</a></li>
-                                            <li><a href="contact-us.html" class="nav-link menu-title">Contact Us</a>
+                                            <li><a href="{{ route('app.index') }}" class="nav-link menu-title text-white">Inicio</a></li>
+                                            <li><a href="{{ route('shop.index') }}" class="nav-link menu-title text-white">Proyectos</a></li>
+                                            <li><a href="cart/list.html" class="nav-link menu-title text-white">Cart</a></li>
+                                            <li><a href="about-us.html" class="nav-link menu-title text-white">About Us</a></li>
+                                            <li><a href="contact-us.html" class="nav-link menu-title text-white">Contact Us</a>
                                             </li>
-                                            <li><a href="blog.html" class="nav-link menu-title">Blog</a></li>
+                                            <li><a href="blog.html" class="nav-link menu-title text-white">Blog</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -150,7 +150,7 @@
                             <div class="menu-right">
                                 <ul>
                                     <li>
-                                        <div class="search-box theme-bg-color">
+                                        <div class="search-box bg-dark">
                                             <i data-feather="search"></i>
                                         </div>
                                     </li>
@@ -175,7 +175,7 @@
                                         </div>
                                     </li>
                                     <li class="onhover-dropdown">
-                                        <div class="cart-media name-usr">
+                                        <div class="cart-media name-usr bg-dark">
                                             @auth <span>{{ Auth::user()->name }}</span> @endauth<i
                                                 data-feather="user"></i>
                                         </div>
@@ -189,7 +189,7 @@
                                                 </li>
                                                 @else
                                                 <li>
-                                                    <a href="{{ route('user.index') }}" class="d-block">My Account</a>
+                                                    <a href="{{ route('user.index') }}" class="d-block">Mi cuenta </a>
                                                 </li>
                                                 @endif
                                                 <li>
@@ -201,11 +201,11 @@
                                                     </form>
                                                 </li>
                                                 @else
-                                                <li>
-                                                    <a href="{{ route('login') }}" class="d-block">Login</a>
+                                                <li class="">
+                                                    <a href="{{ route('login') }}" class="d-block">Iniciar sesión</a>
                                                 </li>
                                                 <li>
-                                                    <a href="{{ route('register') }}" class="d-block">Register</a>
+                                                    <a href="{{ route('register') }}" class="d-block">Registrarse</a>
                                                 </li>
                                                 @endauth
                                                 @endif
@@ -311,7 +311,7 @@
                                         <a href="{{ route('app.index') }}" class="font-dark">Home</a>
                                     </li>
                                     <li>
-                                        <a href="shop.html" class="font-dark">Shop</a>
+                                        <a href="shop.html" class="font-white">Shop</a>
                                     </li>
                                     <li>
                                         <a href="about-us.html" class="font-dark">About Us</a>

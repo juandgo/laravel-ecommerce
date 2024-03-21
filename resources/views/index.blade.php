@@ -4,10 +4,10 @@
 <section class="pt-0 poster-section">
     <div class="poster-image slider-for custome-arrow classic-arrow">
         <div>
-            <img src="assets/images/furniture-images/poster/1.png" class="img-fluid blur-up lazyload" alt="">
+            <img src="assets/images/furniture-images/poster/house.png" class="img-fluid blur-up lazyload" alt="">
         </div>
         <div>
-            <img src="assets/images/furniture-images/poster/2.png" class="img-fluid blur-up lazyload" alt="">
+            <img src="assets/images/furniture-images/poster/house2." class="img-fluid blur-up lazyload" alt="">
         </div>
         <div>
             <img src="assets/images/furniture-images/poster/3.png" class="img-fluid blur-up lazyload" alt="">
