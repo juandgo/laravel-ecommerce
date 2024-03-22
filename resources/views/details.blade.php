@@ -1,8 +1,6 @@
 @extends('layouts.base')
 @push('styles')
-<link id="color-link" rel="stylesheet" type="text/css" href="{{ route('') }}">
-@endpush
-
+    <link id="color-link" rel="stylesheet" type="text/css" href="{{ asset('assets/css/demo2.css') }}">
 @endpush
 @section('content')
 <section class="breadcrumb-section section-b-space" style="padding-top:20px;padding-bottom:20px;">
@@ -57,7 +55,7 @@
                                         @endphp
                                         @foreach ($images as $image)
                                             <div>
-                                                <img src="{{ asset('assets/images/fashion/product/front') }}/{{ $product}}" class="img-fluid blur-up lazyload"
+                                                <img src="{{ asset('assets/images/fashion/product/front') }}/{{$image}}" class="img-fluid blur-up lazyload"
                                                     alt="">
                                             </div>
                                         @endforeach
@@ -80,11 +78,11 @@
                                         </div>
                                         @if ($product->images)
                                         @php
-                                            $images =explode(' ', $product->images);
+                                            $images =explode(',', $product->images);
                                         @endphp
                                         @foreach ($images as $image)
                                             <div>
-                                                <img src="{{ asset('assets/images/fashion/product/front') }}/{{ $product}}" class="img-fluid w-100 image_zoom_cls-1 blur-up lazyload" alt="">
+                                                <img src="{{ asset('assets/images/fashion/product/front') }}/{{$image}}" class="img-fluid w-100 image_zoom_cls-1 blur-up lazyload" alt="">
                                             </div>
 +                                        @endforeach
                                         @endif

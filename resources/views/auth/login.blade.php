@@ -159,12 +159,12 @@
 
                 <div class="button login">
                     <button type="submit" class="bg-dark">
-                        <span>Log In</span>
+                        <span>Iniciar</span>
                         <i class="fa fa-check"></i>
                     </button>
                 </div>
 
-                <p>Not a member? <a href="{{ route('register') }}" class="theme-color">Regístrate ahora</a></p>
+                <p>Aun no eres un miembro? <a href="{{ route('register') }}" class="theme-color">Regístrate ahora</a></p>
             </form>
         </div>
     </div>
