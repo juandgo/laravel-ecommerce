@@ -15,6 +15,9 @@ Route::get('/product/{slug}',[ShopController::class,'productDetails'])->name('sh
 
 Auth::routes();
 
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('user.index');
+
+
 Route::middleware('auth')->group(function(){
     Route::get('/my-account',[UserController::class,'index'])->name('user.index');
 });

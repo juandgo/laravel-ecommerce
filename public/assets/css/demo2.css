@@ -1133,7 +1133,7 @@ section,
           flex: 1; }
 
 .rating li i.orange {
-  color: #facc21; }
+  color: blcak; }
 
 .g-18 {
   margin: -18px; }
@@ -5060,7 +5060,7 @@ header .main-navbar {
       max-width: 100%; } }
 
 /* =====================
-    Slick SLider CSS Start 
+    Slick SLider CSS Start
  ========================== */
 .box-arrow .slick-prev {
   left: calc(5px + (25 - 5) * ((100vw - 320px) / (1920 - 320)));

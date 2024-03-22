@@ -52,7 +52,7 @@
 
 </head>
 
-<body class="theme-color4 bg-dark">
+<body class="theme-color4">
     <style>
         header .profile-dropdown ul li {
             display: block;
@@ -138,11 +138,10 @@
                                             </li>
                                             <li><a href="{{ route('app.index') }}" class="nav-link menu-title text-white">Inicio</a></li>
                                             <li><a href="{{ route('shop.index') }}" class="nav-link menu-title text-white">Proyectos</a></li>
-                                            <li><a href="cart/list.html" class="nav-link menu-title text-white">Cart</a></li>
+                                            {{-- <li><a href="cart/list.html" class="nav-link menu-title text-white">Cart</a></li>
                                             <li><a href="about-us.html" class="nav-link menu-title text-white">About Us</a></li>
-                                            <li><a href="contact-us.html" class="nav-link menu-title text-white">Contact Us</a>
-                                            </li>
-                                            <li><a href="blog.html" class="nav-link menu-title text-white">Blog</a></li>
+                                            <li><a href="contact-us.html" class="nav-link menu-title text-white">Contact Us</a>                                            </li>
+                                            <li><a href="blog.html" class="nav-link menu-title text-white">Blog</a></li> --}}
                                         </ul>
                                     </div>
                                 </div>
@@ -195,7 +194,7 @@
                                                 <li>
                                                     <a href="{{ route('logout') }}"
                                                         onclick="event.preventDefault(); document.getElementById('frmlogout').submit();"
-                                                        class="d-block">Logout</a>
+                                                        class="d-block">Salir</a>
                                                     <form id="frmlogout" action="{{ route('logout') }}" method="post">
                                                         @csrf
                                                     </form>

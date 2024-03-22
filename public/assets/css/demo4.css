@@ -6857,7 +6857,10 @@ footer .sub-footer {
 .login-section {
   min-height: 100vh;
   position: relative;
-  background: #f0f3f8;
+  /* background-image: url(../images/furniture-images/poster/back_landscape.jpg); */
+  background-image: url(../images/login_background.jpg);
+  /* background: #f0f3f8; */
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6872,12 +6875,16 @@ footer .sub-footer {
     width: 100%;
     max-width: 460px;
     position: relative;
+
     top: 0;
     left: 0;
     -webkit-transform: translate(0);
             transform: translate(0); }
     .login-section .materialContainer .box {
       position: relative;
+      border-color: gray;
+      border-width: medium;
+      border-style: solid;
       top: 0;
       opacity: 1;
       float: left;

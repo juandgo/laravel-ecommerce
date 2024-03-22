@@ -1,14 +1,24 @@
 @extends('layouts.base')
 @push('styles')
-    <link id="color-link" rel="stylesheet" type="text/css" href="assets/css/demo2.css">
-    <style>
-        nav svg{
-            height: 20px;
-        }
-    </style>
+<link id="color-link" rel="stylesheet" type="text/css" href="assets/css/demo2.css">
+<style>
+    nav svg {
+        height: 20px;
+    }
+
+    .product-box .product-details h5 {
+        margin: 5px auto 6px auto;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        overflow: hidden;
+        width: 100%;
+        font-weight: 500;
+    }
+</style>
 @endpush
 @section('content')
-<section class="breadcrumb-section section-b-space" style="padding-top:20px;padding-bottom:20px;">
+<section class="breadcrumb-section section-b-space" style="padding-top:20px;padding-bottom:20px;background-color:">
     <ul class="circles">
         <li></li>
         <li></li>
@@ -29,7 +39,7 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
                             <a href="{{ route('app.index') }}">
-                                <i class="fas fa-home"></i>
+                                <i class="fas fa-home text-dark"></i>
                             </a>
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">Shop</li>
@@ -40,7 +50,7 @@
     </div>
 </section>
 <!-- Shop Section start -->
-<section class="section-b-space bg-dark">
+<section class="section-b-space">
     <div class="container">
         <div class="row">
             <div class="col-lg-3 category-side col-md-4">
@@ -51,8 +61,8 @@
                     <div class="accordion category-name" id="accordionExample">
                         <div class="accordion-item category-rating">
                             <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button bg-dark text-white" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo">
+                                <button class="accordion-button bg-dark text-white" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo">
                                     Brand
                                 </button>
                             </h2>
@@ -273,8 +283,7 @@
                                     Category
                                 </button>
                             </h2>
-                            <div id="collapseSix" class="accordion-collapse collapse show"
-                                aria-labelledby="headingOne">
+                            <div id="collapseSix" class="accordion-collapse collapse show" aria-labelledby="headingOne">
                                 <div class="accordion-body category-scroll">
                                     <ul class="category-list">
 
@@ -417,26 +426,22 @@
                                 <ul class="d-flex">
                                     <li class="two-grid">
                                         <a href="javascript:void(0)">
-                                            <img src="assets/svg/grid-2.svg" class="img-fluid blur-up lazyload"
-                                                alt="">
+                                            <img src="assets/svg/grid-2.svg" class="img-fluid blur-up lazyload" alt="">
                                         </a>
                                     </li>
                                     <li class="three-grid d-md-inline-block d-none">
                                         <a href="javascript:void(0)">
-                                            <img src="assets/svg/grid-3.svg" class="img-fluid blur-up lazyload"
-                                                alt="">
+                                            <img src="assets/svg/grid-3.svg" class="img-fluid blur-up lazyload" alt="">
                                         </a>
                                     </li>
                                     <li class="grid-btn active d-lg-inline-block d-none">
                                         <a href="javascript:void(0)">
-                                            <img src="assets/svg/grid.svg" class="img-fluid blur-up lazyload"
-                                                alt="">
+                                            <img src="assets/svg/grid.svg" class="img-fluid blur-up lazyload" alt="">
                                         </a>
                                     </li>
                                     <li class="list-btn">
                                         <a href="javascript:void(0)">
-                                            <img src="assets/svg/list.svg" class="img-fluid blur-up lazyload"
-                                                alt="">
+                                            <img src="assets/svg/list.svg" class="img-fluid blur-up lazyload" alt="">
                                         </a>
                                     </li>
                                 </ul>
@@ -454,13 +459,13 @@
                         <div class="product-box">
                             <div class="img-wrapper">
                                 {{-- <div class="front">
-                                    <a href="product/nihil-beatae-sit-sed.html">
+                                    <a href="{{ route('shop.product.details',['slug'=>$product->image]) }}">
                                         <img src="assets/images/fashion/product/front/{{ $product->image }}"
                                             class="bg-img blur-up lazyload" alt="">
                                     </a>
                                 </div> --}}
                                 <div class="back">
-                                    <a href="product/nihil-beatae-sit-sed.html">
+                                    <a href="{{ route('shop.product.details',['slug'=>$product->image]) }}">
                                         <img src="assets/images/fashion/product/back/{{ $product->image }}"
                                             class="bg-img blur-up lazyload" alt="">
                                     </a>
@@ -507,7 +512,8 @@
                                     </ul>
                                 </div>
                                 <div class="main-price">
-                                    <a href="product/nihil-beatae-sit-sed.html" class="font-default">
+                                    <a href="{{ route('shop.product.details',['slug'=>$product->image]) }}"
+                                        class="font-default">
                                         <h5 class="ms-0">{{ $product->name }}</h5>
                                     </a>
                                     <div class="listing-content">

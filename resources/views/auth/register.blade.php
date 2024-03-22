@@ -102,7 +102,7 @@
         <div class="box">
             <form method="POST" action="{{ route('register') }}">
                 @csrf
-                <div class="login-title">
+                <div class="login-title text-dark">
                     <h2>Regístrate</h2>
                 </div>
 
@@ -136,7 +136,7 @@
                 </div>
 
                 <div class="button login">
-                    <button type="submit">
+                    <button type="submit" class="bg-dark">
                         <span>Registrarse</span>
                         <i class="fa fa-check"></i>
                     </button>

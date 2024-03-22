@@ -130,9 +130,11 @@
     }
 </style>
 <!-- Log In Section Start -->
-<div class="login-section bg-dark">
-    <div class="materialContainer">
-        <div class="box">
+{{-- <div class="login-section bg-dark"> --}}
+    {{-- <img src="assets/images/furniture-images/poster/plano.jpg" alt="" style=""> --}}
+    <div class="login-section">
+        <div class="materialContainer">
+            <div class="box">
             <form method="POST" action="{{ route('login') }}">
                 @csrf
                 <div class="login-title text-dark">
